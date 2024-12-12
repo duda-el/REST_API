@@ -1,0 +1,14 @@
+<button (click)="getPosts()">Get Posts</button>
+<button (click)="createPost()">Create Post</button>
+<button (click)="updatePost(1)">Update Post</button>
+<button (click)="deletePost(1)">Delete Post</button>
+
+<div *ngIf="posts">
+  <h2>Posts:</h2>
+  <ul>
+    <li *ngFor="let post of posts">
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.body }}</p>
+    </li>
+  </ul>
+</div>
